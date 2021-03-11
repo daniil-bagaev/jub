@@ -40,3 +40,4 @@ gulp
     });
 gulp
     .task('git', gulp.series('bump','git:add','git:commit','git:push'));
+    
