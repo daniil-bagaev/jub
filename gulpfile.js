@@ -1,13 +1,14 @@
+'use strict';
 const 
     gulp = require('gulp'),
     $ = require('gulp-load-plugins')({
         pattern: ['*']
     }),
-    rc = {
-        git: require('./config/.gitrc'),
-        package: require('./package.json'),
-        path: require('./config/.pathrc'),
-    };
+    rc = new Object();
+    rc.path = require('./config/.pathrc.json');
+    rc.config = require(rc.path.config.gulp);
+    rc.package = require(rc.path.config.package);
+    rc.git = require(rc.path.config.git);
 gulp
     .task('bump', () => {
         return gulp
