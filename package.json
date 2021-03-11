@@ -1,6 +1,6 @@
 {
   "name": "jub",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Jubatus is",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/daniil-bagaev/jub/issues"
   },
-  "homepage": "https://github.com/daniil-bagaev/jub#readme"
+  "homepage": "https://github.com/daniil-bagaev/jub#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-bump": "^3.2.0",
+    "gulp-git": "^2.10.1",
+    "gulp-load-plugins": "^2.0.6"
+  }
 }
