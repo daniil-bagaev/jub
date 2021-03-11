@@ -9,10 +9,6 @@ const
         path: require('./config/.pathrc'),
     };
 gulp
-    .task('git', () => {
-        gulp.series(['bump','git:add','git:commit','git:push']);
-    })
-gulp
     .task('bump', () => {
         return gulp
             .src('./package.json')
@@ -40,5 +36,7 @@ gulp
             if (err) 
                 throw err;
             });
-        return cb();
+        cb();
     });
+gulp
+    .task('git', gulp.series('bump','git:add','git:commit','git:push'));
