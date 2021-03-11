@@ -9,11 +9,9 @@ const
         path: require('./config/.pathrc'),
     };
 gulp
-    .task('git:add', () => {
-        return gulp
-            .src('./')
-            .pipe($.git.add())
-    });
+    .task('git', () => {
+        gulp.series(['bump','git:add','git:commit','git:push']);
+    })
 gulp
     .task('bump', () => {
         return gulp
@@ -21,6 +19,12 @@ gulp
             .pipe($.bump({type: rc.git.patch}))
             .pipe(gulp.dest('./'))
     })
+gulp
+    .task('git:add', () => {
+        return gulp
+            .src('./')
+            .pipe($.git.add())
+    });
 gulp
     .task('git:commit', () => {
         return gulp
@@ -31,9 +35,10 @@ gulp
             })
     });
 gulp
-    .task('git:push', () => {
-        return $.git.push('origin', 'main', (err) => {
+    .task('git:push', (cb) => {
+        $.git.push('origin', 'main', (err) => {
             if (err) 
                 throw err;
-            })
+            });
+        return cb();
     });
