@@ -1,10 +1,11 @@
 {
   "name": "jub",
-  "version": "0.0.7",
-  "description": "Jubatus is",
+  "version": "0.0.8",
+  "description": "Jubatus is ...",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "(gulp >> .log\\temp.log && type .log\\temp.log && type .log\\temp.log >> .log\\gulp.log) && echo.>.log\\temp.log"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "gulp-less": "^4.0.1",
     "gulp-load-plugins": "^2.0.6",
     "gulp-pug": "^4.0.1",
+    "gulp-size": "^3.0.0",
     "pump": "^3.0.0",
     "yargs": "^16.2.0"
   }

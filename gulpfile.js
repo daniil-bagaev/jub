@@ -35,12 +35,20 @@ const
         .argv;
 let 
     builder = () => {
-        for (let val of tasks) 
+        let tsk =[];
+        for (let val of tasks) {
             tasker(rc.config.mode[argv.mode].tasks[val], argv.mode+':'+val);
+            tsk.push(argv.mode+':'+val);
+        }
+        gulp.task('default', gulp.series(tsk));
     },
     tasker = (task, taskName) => {
+        const size = $.size({
+            showFiles: true
+        });
         let arrBeg = [
-                gulp.src(task.src)
+                gulp.src(task.src),
+                size
             ], 
             arrEnd = [
                 gulp.dest(task.dest)
@@ -49,7 +57,8 @@ let
         arr = arrBeg.concat(task.plugins.concat(arrEnd));
         gulp
             .task(taskName, () => {
-                return $.pump(arr);
+                return $
+                    .pump(arr);
             });
     },
     gitter = () => {
@@ -89,5 +98,5 @@ let
     runner = () => {
 
     };
-//builder();
 gitter();
+builder();

@@ -6,10 +6,10 @@
     },
     "dev": {
         "pug": ["./src/**/*.pug", "!./src/**/__*.pug"],
-        "less": ["./src/assets/less/**/*.less", "!./src/assets/less/**/__*.less"]
+        "less": ["./src/asset/less/**/*.less", "!./src/asset/less/**/__*.less"]
     },
     "build": {
         "main": "./build/",
-        "css": "./build/assets/css/"
+        "css": "./build/asset/css/"
     }
 }

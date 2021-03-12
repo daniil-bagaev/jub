@@ -36,21 +36,27 @@ module.exports = {
         prod: {
             tasks: {
                 css: {
-                    name: 'css'
+                    src: rc.path.dev.pug,
+                    dest: rc.path.build.main,
+                    plugins: []
                 }
             }
         },
         dep: {
             tasks: {
                 css: {
-                    name: 'css'
+                    src: rc.path.dev.pug,
+                    dest: rc.path.build.main,
+                    plugins: []
                 }
             }
         },
         build: {
             tasks: {
                 css: {
-                    name: 'css'
+                    src: rc.path.dev.pug,
+                    dest: rc.path.build.main,
+                    plugins: []
                 }
             }
         }
