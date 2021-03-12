@@ -1,6 +1,6 @@
 {
   "name": "jub",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Jubatus is",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/daniil-bagaev/jub.git"
   },
-  "author": "Daniil Bagaev <daniil-bagaev>",
+  "author": "Jubatus Team",
+  "contributors": [
+    "Daniil Bagaev <daniil.bagaev@yahoo.com>"
+  ],
+  "year": "2021",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/daniil-bagaev/jub/issues"
@@ -20,6 +24,10 @@
     "gulp": "^4.0.2",
     "gulp-bump": "^3.2.0",
     "gulp-git": "^2.10.1",
-    "gulp-load-plugins": "^2.0.6"
+    "gulp-less": "^4.0.1",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-pug": "^4.0.1",
+    "pump": "^3.0.0",
+    "yargs": "^16.2.0"
   }
 }

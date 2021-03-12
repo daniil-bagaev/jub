@@ -1,7 +1,15 @@
 {
     "config": {
         "git": "./config/.gitrc.json",
-        "gulp": "./config/.pathrc.json",
+        "gulp": "./config/gulp.config.js",
         "package": "./package.json"
+    },
+    "dev": {
+        "pug": ["./src/**/*.pug", "!./src/**/__*.pug"],
+        "less": ["./src/assets/less/**/*.less", "!./src/assets/less/**/__*.less"]
+    },
+    "build": {
+        "main": "./build/",
+        "css": "./build/assets/css/"
     }
 }

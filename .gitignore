@@ -1,1 +1,7 @@
+## IDE
+.vscode/
+## Dependencies
 node_modules/
+## Project
+.loc/
+build/
