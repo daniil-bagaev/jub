@@ -1,13 +1,19 @@
 {
   "name": "jub",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Jubatus is ...",
   "keywords": [
     "framework"
   ],
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "(if not exist \".loc\" mkdir \".loc\") && (if not exist \".log\" mkdir \".log\")  &&  (if not exist \"build\" mkdir \"build\")",
     "build": "(gulp >> .log\\temp.log && type .log\\temp.log && type .log\\temp.log >> .log\\gulp.log) && echo.>.log\\temp.log",
     "production": "",
     "deploy": "(gulp git >> .log\\temp.log && type .log\\temp.log && type .log\\temp.log >> .log\\deploy.log) && echo.>.log\\temp.log"
@@ -27,21 +33,32 @@
   },
   "homepage": "https://github.com/daniil-bagaev/jub#readme",
   "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-bump": "^3.2.0",
     "gulp-cached": "^1.1.1",
-    "gulp-changed": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
     "gulp-git": "^2.10.1",
     "gulp-if": "^3.0.0",
     "gulp-less": "^4.0.1",
     "gulp-load-plugins": "^2.0.6",
     "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-pug": "^4.0.1",
+    "gulp-remember": "^1.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^3.0.0",
+    "normalize-port": "^1.0.0",
+    "path": "^0.12.7",
+    "postcss-critical-css": "^3.0.7",
+    "postcss-csscomb": "^3.0.0",
+    "postcss-csso": "^5.0.0",
+    "postcss-sorting": "^6.0.0",
+    "postcss-uncss": "^0.17.0",
     "pump": "^3.0.0",
     "yargs": "^16.2.0"
   }

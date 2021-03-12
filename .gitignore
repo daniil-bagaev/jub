@@ -1,8 +1,10 @@
 ## IDE
 .vscode/
+.idea/
 ## Dependencies
 node_modules/
 ## Project
 .loc/
 .log/
 build/
+src/asset/img/__original/

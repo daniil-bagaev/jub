@@ -7,7 +7,7 @@ const
     }),
     modes = [],
     tasks = [],
-    rc = new Object();
+    rc = {};
     rc.path = require('./config/.pathrc.json');
     rc.config = require(rc.path.config.gulp);
     rc.package = require(rc.path.config.package);
@@ -43,14 +43,18 @@ let
         gulp.task('default', gulp.series(tsk));
     },
     tasker = (task, taskName) => {
-        const size = $.size({
-            showFiles: true
-        });
         let arrBeg = [
                 gulp.src(task.src),
-                size
+                $.size({
+                    showFiles: false
+                }),
+                $.debug({
+                    showFiles: task.isDebug
+                }),
+                $.if(task.isWatching,$.cached(taskName))
             ], 
             arrEnd = [
+                $.if(task.isWatching,$.remember(taskName)),
                 gulp.dest(task.dest)
             ],
             arr = [];
@@ -94,6 +98,9 @@ let
             });
         gulp
             .task('git', gulp.series('bump','git:add','git:commit','git:push'));
+    },
+    watcher = () => {
+
     },
     runner = () => {
 

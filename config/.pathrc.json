@@ -2,16 +2,39 @@
     "config": {
         "git": "./config/.gitrc.json",
         "gulp": "./config/gulp.config.js",
+        "pug": "../config/.pugrc.json",
         "package": "./package.json"
     },
-    "dev": {
+    "src": {
+        "font": ["./src/asset/font/*.{otf,eot,svg,ttf,woff,woff2}", "!./src/asset/font/__*.{otf,eot,svg,ttf,woff,woff2}"],
         "pug": ["./src/**/*.pug", "!./src/**/__*.pug"],
         "less": ["./src/asset/less/**/*.less", "!./src/asset/less/**/__*.less"],
-        "js": ["./src/asset/js/**/*.js", "!./src/asset/js/**/__*.js"]
+        "js": ["./src/asset/js/**/*.js", "!./src/asset/js/**/__*.js"],
+        "img": ["./src/asset/img/**/*.{ico,png,jpeg,svg,jpg,bmp}", "!./src/asset/img/**/__*.{ico,png,jpeg,svg,jpg,bmp}"],
+        "ignore": ["!./src/asset/img/__original"],
+        "ts": ["./src/asset/ts/**/*.ts", "!./src/asset/ts/**/__*.ts"],
+        "json": ["./src/**/*.json", "!./src/**/__*.json"]
     },
     "build": {
         "main": "./build/",
-        "css": "./build/asset/css/",
-        "js": "./build/asset/js/"
+        "style": "./build/asset/css/",
+        "script": "./build/asset/js/",
+        "font": "./build/asset/font/",
+        "img": "./build/asset/img/"
+    },
+    "dev": {
+        "font": "./build/asset/font/*.{otf,eot,svg,ttf,woff,woff2}",
+        "html": "./build/**/*.html",
+        "css": "./build/asset/less/**/*.css",
+        "js": "./build/asset/js/**/*.js",
+        "img": "./build/asset/img/**/*.{ico,png,jpeg,svg,jpg,bmp}",
+        "json": "./build/**/*.json"
+    },
+    "public": {
+        "main": "./public/",
+        "style": "./public/asset/css/",
+        "script": "./public/asset/js/",
+        "font": "./public/asset/font/",
+        "img": "./public/asset/img/"
     }
 }
