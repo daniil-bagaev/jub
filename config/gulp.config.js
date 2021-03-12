@@ -15,6 +15,13 @@ module.exports = {
     mode: {
         dev: {
             tasks: {
+                clean: {
+                    src: rc.path.build.main,
+                    dest: rc.path.build.main,
+                    plugins:  [
+                        $.clean()
+                    ]
+                },
                 pug: {
                     src: rc.path.dev.pug,
                     dest: rc.path.build.main,
@@ -29,6 +36,13 @@ module.exports = {
                     dest: rc.path.build.css,
                     plugins: [
                         $.less()
+                    ]
+                },
+                js: {
+                    src: rc.path.dev.js,
+                    dest: rc.path.build.js,
+                    plugins: [
+
                     ]
                 }
             }

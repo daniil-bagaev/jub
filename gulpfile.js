@@ -37,7 +37,7 @@ let
     builder = () => {
         let tsk =[];
         for (let val of tasks) {
-            tasker(rc.config.mode[argv.mode].tasks[val], argv.mode+':'+val);
+            tasker(rc.config.mode[argv.mode].tasks[val], argv.mode + ':' + val);
             tsk.push(argv.mode+':'+val);
         }
         gulp.task('default', gulp.series(tsk));

@@ -6,10 +6,12 @@
     },
     "dev": {
         "pug": ["./src/**/*.pug", "!./src/**/__*.pug"],
-        "less": ["./src/asset/less/**/*.less", "!./src/asset/less/**/__*.less"]
+        "less": ["./src/asset/less/**/*.less", "!./src/asset/less/**/__*.less"],
+        "js": ["./src/asset/js/**/*.js", "!./src/asset/js/**/__*.js"]
     },
     "build": {
         "main": "./build/",
-        "css": "./build/asset/css/"
+        "css": "./build/asset/css/",
+        "js": "./build/asset/js/"
     }
 }
