@@ -5,14 +5,13 @@ const
         debug: false,
         pattern: ['*']
     }),
+    modes = [],
+    tasks = [],
     rc = new Object();
     rc.path = require('./config/.pathrc.json');
     rc.config = require(rc.path.config.gulp);
     rc.package = require(rc.path.config.package);
     rc.git = require(rc.path.config.git);
-let 
-    modes = [],
-    tasks = [];
 for (const [key, value] of Object.entries(rc.config.mode))
     modes.push(key);
 for (const [key, val] of Object.entries(rc.config.mode[rc.config.default.mode].tasks))
