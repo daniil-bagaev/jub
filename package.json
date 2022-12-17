@@ -1,0 +1,22 @@
+{
+  "name": "jub",
+  "version": "0.0.0",
+  "description": "jubatus.site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniil-bagaev/jub.git"
+  },
+  "author": "Jubatus Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniil-bagaev/jub/issues"
+  },
+  "homepage": "https://github.com/daniil-bagaev/jub#readme",
+  "dependencies": {
+    "jubat": "^0.0.18"
+  }
+}
